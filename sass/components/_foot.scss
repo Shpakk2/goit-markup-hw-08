@@ -99,6 +99,10 @@
         background-color: transparent;
         color: var(--alt-color);
 
+                @media screen and(min-width: 768px) {
+                        width: 450px;
+                    }
+
         @media screen and(min-width: 1200px) {
                width: 358px;
         margin: 0px;
@@ -164,7 +168,7 @@ margin-right: auto;
 
     @media screen and(min-width: 768px) {
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-around;
         }
 
     @media screen and(min-width: 1200px) {
