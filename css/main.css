@@ -194,6 +194,7 @@ img {
 
 .auth-nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .auth-nav__link {
@@ -432,6 +433,7 @@ img {
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+  width: 100%;
 }
 .foot__container {
   align-items: baseline;
@@ -497,7 +499,7 @@ img {
 
 /* footer-form */
 .subscribe__input {
-  width: 450px;
+  width: 100%;
   height: 50px;
   margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
