@@ -601,7 +601,7 @@ img {
 
 .modal {
   position: absolute;
-  width: 528px;
+  width: 100%;
   /* height: 581px; */
   background-color: var(--background-color);
   top: 50%;
@@ -611,6 +611,21 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 .modal .close:hover .close__icon, .modal .close:focus .close__icon {
   fill: var(--link-color);
@@ -681,6 +696,14 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 12px;
+  line-height: 14px;
+}
+@media screen and (min-width: 1200px) {
+  .check {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .check__item {
   display: flex;
@@ -715,8 +738,13 @@ img {
   border-bottom: 1px solid var(--link-color);
   border-radius: 2px;
   width: 100%;
-  bottom: 6px;
+  bottom: 2px;
   left: 0;
+}
+@media screen and (min-width: 1200px) {
+  .check__terms::after {
+    bottom: 6px;
+  }
 }
 
 .close {

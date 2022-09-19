@@ -23,7 +23,7 @@
 
 .modal {
     position: absolute;
-    width: 528px;
+    width: 100%;
     /* height: 581px; */
     background-color: var(--background-color);
     top: 50%;
@@ -34,6 +34,18 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     padding: 40px;
+
+        @media screen and(min-width: 480px) {
+                width: 450px;
+            }
+
+    @media screen and(min-width: 768px) {
+        width: 450px;
+    }
+    @media screen and(min-width: 1200px) {
+        width: 528px;
+    }
+    
 
     & .close:hover .close__icon,
     & .close:focus .close__icon {
@@ -116,6 +128,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 12px;
+    line-height: 14px;
+    
+    @media screen and(min-width: 1200px) {
+        font-size: 14px;
+            line-height: 1.71;
+        }
     &__item {
         display: flex;
         align-items: center;
@@ -152,8 +171,12 @@
         border-bottom: 1px solid var(--link-color);
         border-radius: 2px;
         width: 100%;
-        bottom: 6px;
+        bottom: 2px;
         left: 0;
+        
+        @media screen and(min-width: 1200px) {
+            bottom: 6px;
+        }
     }
 }
 
