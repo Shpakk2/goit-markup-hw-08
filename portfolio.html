@@ -20,7 +20,7 @@
             <nav class="header__nav">
             
             <ul class="site-nav">
-                <li class="site-nav__item"><a href="./index.html" class="site-nav__link link">Студія</a></li>
+                <li class="site-nav__item"><a href="./index.html" class="site-nav__link link ">Студія</a></li>
                 <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link link current">Портфоліо</a></li>
                 <li class="site-nav__item"><a href="" class="site-nav__link link">Контакти</a></li>
             </ul>
@@ -35,6 +35,47 @@
                             <use href="./images/symbol-defs.svg#icon-phone"></use>
                         </svg>+38 096 111 11 11</a></li>
             </ul>
+            <button type="button" class="menu-open">
+                <svg class="menu-open__icon" width="40" height="40">
+                    <use href="./images/symbol-defs.svg#icon-menu1" ></use>
+                </svg>
+            </button>
+            <div class="mob-menu is-hidden">
+                <div class="container">
+                              <div class="mob-menu-top">
+                <button type="button" class="menu-close">
+                <svg class="menu-open__icon" width="40" height="40">
+                    <use href="./images/symbol-defs.svg#icon-close" ></use>
+                </svg>
+            </button> 
+            <nav>
+            <ul class="mob-menu__list">
+                <li class="mob-menu__item"><a href="./index.html" class="mob-menu__link link ">Студія</a></li>
+                <li class="mob-menu__item"><a href="./portfolio.html" class="mob-menu__link link current">Портфоліо</a></li>
+                <li class="mob-menu__item"><a href="" class="mob-menu__link link">Контакти</a></li>
+            </ul>  
+            </nav>
+            </div>
+            <div class="mob-menu__bottom">
+                <ul class="mob-menu__contacts">
+                    <li class="mob-menu__item">
+                        <a class="mob-menu__tel link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                    <li class="mob-menu__item">
+                        <a class="mob-menu__mail link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                </ul>
+                <ul class="mob-social">
+                    <li class="mob-social__item">
+                        <a href="" class="mob-social__link">instagram</a></li>
+                    <li class="mob-social__item">
+                        <a href="" class="mob-social__link">twitter</a></li>
+                    <li class="mob-social__item">
+                        <a href="" class="mob-social__link">facebook</a></li>
+                    <li class="mob-social__item">
+                        <a href="" class="mob-social__link">linkedin</a></li>
+                </ul>
+            </div>
+            </div>
+            </div>
         </div>
     </header>
     <!--Унікальний контент-->
@@ -62,8 +103,31 @@
         <ul class="portfolio list">
             <li class="portfolio__item"> 
                 <a href="" class="portfolio__link link">
-                    <div class="portfolio__wrap"> 
-                        <img src="./images/p1.jpg" alt="Ноутбук" width="370"/>
+                    <div class="portfolio__wrap">
+                        <picture>
+                            <source
+                                srcset="
+                                    ./images/proj-1-desk.jpg 1x,
+                                    ./images/proj-1-desk-2x.jpg 2x
+                                "
+                                media="(min-width: 1200px)"
+                                />
+                            <source
+                                srcset="
+                                    ./images/proj-1-tab.jpg 1x,
+                                    ./images/proj-1-tab-2x.jpg 2x
+                                "
+                                media="(min-width: 768px)"
+                                />
+                            <source
+                                srcset="
+                                    ./images/proj-1-mob.jpg 1x,
+                                    ./images/proj-1-mob-2x.jpg 2x
+                                "
+                                media="(min-width: 480px)"
+                            />                            
+                           <img src="./images/proj-1-desk.jpg" alt="Ноутбук" width="370"/>
+                        </picture> 
                     <p class="portfolio__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                     </div>
                 <div class="portfolio__project">
@@ -73,8 +137,31 @@
             </li>  
             <li class="portfolio__item">  
                 <a href="" class="portfolio__link link">
-                    <div class="portfolio__wrap"> 
-                    <img src="./images/p2.jpg" alt="Баскетбол" width="370"/>  
+                    <div class="portfolio__wrap">
+                        <picture>
+                            <source
+                                srcset="
+                                    ./images/proj-2-desk.jpg 1x,
+                                    ./images/proj-2-desk-2x.jpg 2x
+                                "
+                                media="(min-width: 1200px)"
+                                />
+                            <source
+                                srcset="
+                                    ./images/proj-2-tab.jpg 1x,
+                                    ./images/proj-2-tab-2x.jpg 2x
+                                "
+                                media="(min-width: 768px)"
+                                />
+                            <source
+                                srcset="
+                                    ./images/proj-2-mob.jpg 1x,
+                                    ./images/proj-2-mob-2x.jpg 2x
+                                "
+                                media="(min-width: 480px)"
+                            />   
+                            <img src="./images/proj-2-desk.jpg" alt="Баскетбол" width="370"/> 
+                        </picture>  
                     <p class="portfolio__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nam odio labore quaerat at quidem totam deserunt eaque eos praesentium id assumenda, nihil, similique molestiae officia rem, quas voluptatem debitis.</p>
                     </div>
                 <div class="portfolio__project">
@@ -85,7 +172,30 @@
             <li class="portfolio__item">  
                 <a href="" class="portfolio__link link">
                     <div class="portfolio__wrap"> 
-                    <img src="./images/p3.jpg" alt="Ресторан" width="370"/>
+                    <picture>
+                        <source
+                            srcset="
+                                ./images/proj-3-desk.jpg 1x,
+                                ./images/proj-3-desk-2x.jpg 2x
+                            "
+                            media="(min-width: 1200px)"
+                            />
+                        <source
+                            srcset="
+                                ./images/proj-3-tab.jpg 1x,
+                                ./images/proj-3-tab-2x.jpg 2x
+                            "
+                            media="(min-width: 768px)"
+                            />
+                        <source
+                            srcset="
+                                ./images/proj-3-mob.jpg 1x,
+                                ./images/proj-3-mob-2x.jpg 2x
+                            "
+                            media="(min-width: 480px)"
+                        />   
+                        <img src="./images/proj-3-desk.jpg" alt="Ресторан" width="370"/>
+                    </picture>
                     <p class="portfolio__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nam odio labore quaerat at quidem totam deserunt eaque eos praesentium id assumenda, nihil, similique molestiae officia rem, quas voluptatem debitis.</p>
                     </div>
                 <div class="portfolio__project">
@@ -95,7 +205,30 @@
             </li>  
             <li class="portfolio__item">  
                <a href="" class="portfolio__link link"><div class="portfolio__wrap"> 
-                    <img src="./images/p4.jpg" alt="Навушники" width="370"/>
+                    <picture>
+                        <source
+                            srcset="
+                                ./images/proj-4-desk.jpg 1x,
+                                ./images/proj-4-desk-2x.jpg 2x
+                            "
+                            media="(min-width: 1200px)"
+                            />
+                        <source
+                            srcset="
+                                ./images/proj-4-tab.jpg 1x,
+                                ./images/proj-4-tab-2x.jpg 2x
+                            "
+                            media="(min-width: 768px)"
+                            />
+                        <source
+                            srcset="
+                                ./images/proj-4-mob.jpg 1x,
+                                ./images/proj-4-mob-2x.jpg 2x
+                            "
+                            media="(min-width: 480px)"
+                        /> 
+                        <img src="./images/proj-4-desk.jpg" alt="Навушники" width="370"/>
+                    </picture>
                     <p class="portfolio__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nam odio labore quaerat at quidem totam deserunt eaque eos praesentium id assumenda, nihil, similique molestiae officia rem, quas voluptatem debitis.</p>
                     </div> 
                 <div class="portfolio__project">
@@ -105,7 +238,30 @@
             </li>  
             <li class="portfolio__item"> 
                 <a href="" class="portfolio__link link"><div class="portfolio__wrap"> 
-                    <img src="./images/p5.jpg" alt="Коробки" width="370"/>
+                    <picture>
+                        <source
+                            srcset="
+                                ./images/proj-5-desk.jpg 1x,
+                                ./images/proj-5-desk-2x.jpg 2x
+                            "
+                            media="(min-width: 1200px)"
+                            />
+                        <source
+                            srcset="
+                                ./images/proj-5-tab.jpg 1x,
+                                ./images/proj-5-tab-2x.jpg 2x
+                            "
+                            media="(min-width: 768px)"
+                            />
+                        <source
+                            srcset="
+                                ./images/proj-5-mob.jpg 1x,
+                                ./images/proj-5-mob-2x.jpg 2x
+                            "
+                            media="(min-width: 480px)"
+                        />  
+                        <img src="./images/proj-5-desk.jpg" alt="Коробки" width="370"/>
+                    </picture>
                     <p class="portfolio__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nam odio labore quaerat at quidem totam deserunt eaque eos praesentium id assumenda, nihil, similique molestiae officia rem, quas voluptatem debitis.</p>
                     </div>
                 <div class="portfolio__project">
@@ -115,7 +271,9 @@
             </li>  
             <li class="portfolio__item"> 
                <a href="" class="portfolio__link link"><div class="portfolio__wrap"> 
-                    <img src="./images/p6.jpg" alt="Екран" width="370"/>
+                    <picture>
+                        <img src="./images/proj-6-desk.jpg" alt="Екран" width="370"/>
+                    </picture>
                     <p class="portfolio__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nam odio labore quaerat at quidem totam deserunt eaque eos praesentium id assumenda, nihil, similique molestiae officia rem, quas voluptatem debitis.</p>
                     </div> 
                 <div class="portfolio__project">
@@ -125,7 +283,30 @@
             </li>  
             <li class="portfolio__item"> 
                <a href="" class="portfolio__link link"><div class="portfolio__wrap"> 
-                    <img src="./images/p7.jpg" alt="книжка" width="370"/>
+                    <picture>
+                        <source
+                            srcset="
+                                ./images/proj-7-desk.jpg 1x,
+                                ./images/proj-7-desk-2x.jpg 2x
+                            "
+                            media="(min-width: 1200px)"
+                            />
+                        <source
+                            srcset="
+                                ./images/proj-7-tab.jpg 1x,
+                                ./images/proj-7-tab-2x.jpg 2x
+                            "
+                            media="(min-width: 768px)"
+                            />
+                        <source
+                            srcset="
+                                ./images/proj-7-mob.jpg 1x,
+                                ./images/proj-7-mob-2x.jpg 2x
+                            "
+                            media="(min-width: 480px)"
+                        /> 
+                        <img src="./images/proj-7-desk.jpg" alt="книжка" width="370"/>
+                    </picture>
                     <p class="portfolio__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nam odio labore quaerat at quidem totam deserunt eaque eos praesentium id assumenda, nihil, similique molestiae officia rem, quas voluptatem debitis.</p>
                     </div> 
                 <div class="portfolio__project">
@@ -135,7 +316,30 @@
             </li>  
             <li class="portfolio__item"> 
                 <a href="" class="portfolio__link link"><div class="portfolio__wrap"> 
-                    <img src="./images/p8.jpg" alt="ЛАБ" width="370"/>
+                    <picture>
+                        <source
+                            srcset="
+                                ./images/proj-8-desk.jpg 1x,
+                                ./images/proj-8-desk-2x.jpg 2x
+                            "
+                            media="(min-width: 1200px)"
+                            />
+                        <source
+                            srcset="
+                                ./images/proj-8-tab.jpg 1x,
+                                ./images/proj-8-tab-2x.jpg 2x
+                            "
+                            media="(min-width: 768px)"
+                            />
+                        <source
+                            srcset="
+                                ./images/proj-8-mob.jpg 1x,
+                                ./images/proj-8-mob-2x.jpg 2x
+                            "
+                            media="(min-width: 480px)"
+                        /> 
+                        <img src="./images/proj-8-desk.jpg" alt="ЛАБ" width="370"/>
+                    </picture>
                     <p class="portfolio__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nam odio labore quaerat at quidem totam deserunt eaque eos praesentium id assumenda, nihil, similique molestiae officia rem, quas voluptatem debitis.</p>
                     </div>
                 <div class="portfolio__project">
@@ -145,7 +349,30 @@
             </li>  
             <li class="portfolio__item"> 
                 <a href="" class="portfolio__link link"><div class="portfolio__wrap"> 
-                    <img src="./images/p9.jpg" alt="Робота за ноутбуком" width="370"/>
+                    <picture>
+                        <source
+                            srcset="
+                                ./images/proj-9-desk.jpg 1x,
+                                ./images/proj-9-desk-2x.jpg 2x
+                            "
+                            media="(min-width: 1200px)"
+                            />
+                        <source
+                            srcset="
+                                ./images/proj-9-tab.jpg 1x,
+                                ./images/proj-9-tab-2x.jpg 2x
+                            "
+                            media="(min-width: 768px)"
+                            />
+                        <source
+                            srcset="
+                                ./images/proj-9-mob.jpg 1x,
+                                ./images/proj-9-mob-2x.jpg 2x
+                            "
+                            media="(min-width: 480px)"
+                        /> 
+                        <img src="./images/proj-9-desk.jpg" alt="Робота за ноутбуком" width="370"/>
+                    </picture>
                     <p class="portfolio__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nam odio labore quaerat at quidem totam deserunt eaque eos praesentium id assumenda, nihil, similique molestiae officia rem, quas voluptatem debitis.</p>
                     </div>
                 <div class="portfolio__project">
@@ -214,5 +441,6 @@
         </div>
         </div>
     </footer>
+    <script src="./js/menu.js"></script>
 </body>
 </html>
